@@ -1,0 +1,10 @@
+# display distribution type
+cat /etc/issue
+cat /etc/*-release 
+cat /etc/lsb-release
+
+# display kernel version
+cat /proc/version
+uname -a
+uname -mrs
+rpm -q kernel #red hat

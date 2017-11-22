@@ -1,3 +1,7 @@
+###
+
+Use nessusli fetch --register [activation code]
+
 root@kali2-amd64:~/Downloads# dpkg -i Nessus-6.11.1-debian6_amd64.deb 
 (Reading database ... 309260 files and directories currently installed.)
 Preparing to unpack Nessus-6.11.1-debian6_amd64.deb ...
