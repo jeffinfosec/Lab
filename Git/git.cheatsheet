@@ -1,4 +1,11 @@
-#configure tooling
+$ git config --global user.name "[name]"
+$ git config --global user.email "[email address]"
+$ git clone [url]
 
-$git config --global user.name "[name]"
+# List all new or modified files to be committed
+$ git status
+
+# Shows file difference not yet staged
+$ git add [file]
+
 
