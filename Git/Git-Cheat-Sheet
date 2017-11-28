@@ -1,0 +1,12 @@
+#### GIT CHEAT SHEET ###
+git config --global user.name "[name]
+
+
+# Download a project #
+git clone [url]
+
+# Snapshot a file in preparation for versioning
+git add [file]
+
+
+
