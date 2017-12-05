@@ -1,0 +1,4 @@
+modbus port 502
+dnp 19999
+dnp3 port 20000
+profinet port 34962-64
