@@ -1,0 +1,9 @@
+apt-get install mingw32
+wget http://nullsecurity.net/tools/binary/Hyperion-1.0.zip
+unzip Hyperion-1.0.zip
+Install Veil-Evasion (Github)
+# configure ettercap for root
+nano /etc/ettercap/etter.conf
+Install current version of ADT bundle for 32 bit linux
+Install Smartphone Pentest Framework
+
