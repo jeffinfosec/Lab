@@ -10,11 +10,19 @@
  ___) |  __/ |_| |_| | |_) |
 |____/ \___|\__|\__,_| .__/ 
                      |_| 
-Postfix = Mail Transfer Agents / SMTP servers
-DoveCot = IMAP/POP3 Server
+#Postfix = Mail Transfer Agents / SMTP servers
+#DoveCot = IMAP/POP3 Server
+
 apt-get install postfix
 cat /var/log/mail.log
+
 service postfix status / start
+
 netstat -lntup
 telnet localhost 25
+
 apt-get install dovecot-common dovecot-imapd dovecot-pop3d
+
+#apt-get install mutt
+
+x
