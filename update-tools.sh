@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 apt install figlet
 apt install variety
+=======
+apt-get install metasploit-framework
+apt-get install figlet
+apt-get install variety
+
+>>>>>>> 6a3f943b6ffad6c50a9491c40572fc719a905e29
 #powershell empire
 echo "Detecting Powershell Empire..."
 if [ ! -d "/opt/Empire" ]; then
