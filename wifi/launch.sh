@@ -9,4 +9,4 @@ echo "Switching to monitoring mode..."
 
 airmon-ng start wlan1 
 
-airodump-ng wlan1mon
+airodump-ng wlan0mon
