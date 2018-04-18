@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 print("Setting up a list....")
 
 a = [1,2,4,40,71,80]

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 print("Exercise 2: Odd or Even -")
 
 num = int(raw_input("Enter a number: "))
