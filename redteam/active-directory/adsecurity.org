@@ -1,0 +1,36 @@
+1. Passwords in SYSVOL & Group Policy Preferences
+2. Exploit the MS14-068 Kerberos Vulnerability on a Domain Controller Missing the Patch
+3. Kerberos TGS Service Ticket Offline Cracking (Kerberoast)
+4. The Credential Theft Shuffle
+
+Pass-the-Hash: grab the hash and use to access a resource. Hash is valid until the user changes the account password.
+
+Pass-the-Ticket: grab the Kerberos ticket(s) and use to access a resource. Ticket is valid until the ticket lifetime expires (typically 7 days).
+
+OverPass-the-Hash: use the password hash to get a Kerberos ticket. Hash is valid until the user changes the account password.
+
+3. Gain Access to the Active Directory Database File (ntds.dit)
+Dump LSASS memory with Mimikatz (get Domain Admin credentials)
+Create Install From Media (IFM) set using NTDSUtil (Grab NTDS.dit file)
+
+#COMMON SECURITY ISSUES:
+
+Deploying systems with default settings.
+Too many Domain Admins.
+Not tracking/monitoring/documenting delegated access to Active Directory.
+Over-permissioned Service Accounts.
+Service Accounts with passwords less than 20 characters.
+Using Group Policy Preferences to manage credentials (Please don’t do this).
+Running non-essential roles and services on Domain Controllers.
+Domain Controllers not patched promptly.
+Unpatched systems (servers & workstations).
+Domain Controllers not running a “recent” OS version.
+The same local Administrator account passwords on multiple computers.
+Active Directory Admins logging on to untrusted system
+Not monitoring admin group membership
+Not cleaning up admin group membership 
+Not leveraging the latest security features in the platform
+Not automatically removing inactive (stale) user and computer accounts.
+Keeping legacy authentication active on the network (LM/NTLMv1).
+Being too trusting – Too many Trusts or Trusts without proper security controls.
+Not isolating network resources such as critical servers.
