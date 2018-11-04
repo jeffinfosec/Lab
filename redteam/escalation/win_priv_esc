@@ -1,0 +1,18 @@
+Stored Credentials
+
+#Windows Kernel
+-wmic qfe get Caption,Description,HotFixID,InstalledOn
+-wmic qfe get Caption,Description,HotFixID,InstalledOn | findstr /C:"KB3136041" /C:"KB4018483"
+
+DLL Injection
+Weak Service Permissions
+DLL Hijacking
+Hot Potato
+Group Policy Preferences
+Unquoted Service Path
+Always Install Elevated
+Token Manipulation
+Secondary Logon Handle
+Insecure Registry Permissions
+Intel SYSRET
+
