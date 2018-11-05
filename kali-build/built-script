@@ -1,0 +1,21 @@
+#EXPIRED KEY RING
+wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add
+
+#METASPLOIT SETUP
+service postgresql start
+msfdb init
+msf> db_status
+msf> search wordpress
+
+sudo update-rc.d postgresql enable
+sudo update-rc.d apache2 enable
+
+powershell empire
+veil evasion
+knock
+pwnwiki git clone
+impacket
+pth tookkit
+pupy
+figlet
+
