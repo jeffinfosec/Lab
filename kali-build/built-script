@@ -10,12 +10,8 @@ msf> search wordpress
 sudo update-rc.d postgresql enable
 sudo update-rc.d apache2 enable
 
-powershell empire
-veil evasion
-knock
-pwnwiki git clone
-impacket
-pth tookkit
-pupy
-figlet
+apt-get remove openjdk-8-j*
 
+Installing Oracle Java on Kali Rolling 2017.1
+
+sudo apt install java-package make-jpkg jre-8u144-linux-x64.tar.gz sudo dpkg -i oracle-java8-jre_8u144_amd64.deb sudo update-java-alternatives -s oracle-java8-jre-amd64 java -version

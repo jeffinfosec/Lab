@@ -1,3 +1,4 @@
+http://www.fuzzysecurity.com/tutorials/16.html
 
 -if you are an admin in a medium integrity process (exploitable with bypassuac)
 -for any unquoted service path issues
@@ -8,13 +9,9 @@
 -if any Autologon credentials are left in the registry
 -for any encrypted web.config strings and application pool passwords
 -for any %PATH% .DLL hijacking opportunities (exploitable with write_dllhijacker)
-
-
 Windows Privilege Escalation Fundamentals
 
-Not many people talk about serious Windows privilege escalation which is a shame. I think the reasons for this are probably (1) during pentesting engagements a low-priv shell is often all the proof you need for the customer, (2) in staged environments you often pop the Administrator account, (3) meterpreter makes you lazy (getsystem = lazy-fu), (4) build reviews to often end up being --> authenticated nessus scan, microsoft security baseline analyser...
-
-Contrary to common perception Windows boxes can be really well locked down if they are configured with care. On top of that the patch time window of opportunity is small. So lets dig into the dark corners of the Windows OS and see if we can get SYSTEM.
+Not many people talk about serious Windows privilege escalation which is a shame. I think the reasons for this are probably (1) during pentesting engagements a low-priv shell is often all the proof you need for the customer, (2) in staged environments you often pop the Administrator account, (3) meterpreter makes you lazy (getsystem = lazy-fu), (4) build reviews to often end up being --> authenticated nessus scan, microsoft security baseline analyser...Contrary to common perception Windows boxes can be really well locked down if they are configured with care. On top of that the patch time window of opportunity is small. So lets dig into the dark corners of the Windows OS and see if we can get SYSTEM.
 
 It should be noted that I'll be using various versions of Windows to highlight any commandline differences that may exist. Keep this in mind as various OS/SP differences may exist in terms of commands not existing or generating slightly different output. I have tried to structure this tutorial so it will apply in the most general way to Windows privilege escalation.
 
@@ -25,7 +22,7 @@ Encyclopaedia Of Windows Privilege Escalation (Brett Moore) - here.
 Windows Attacks: AT is the new black (Chris Gates & Rob Fuller) - here.
 Elevating privileges by exploiting weak folder permissions (Parvez Anwar) - here.
 
-Δt for t0 to t3 - Initial Information Gathering
+#Initial Information Gathering
 
 The starting point for this tutorial is an unprivileged shell on a box. We might have used a remote exploit or a client-side attack and we got a shell back. Basically at time t0 we have no understanding of the machine, what it does, what it is connected to, what level of privilege we have or even what operating system it is.
 
@@ -36,9 +33,6 @@ First let's find out what OS we are connected to:
 C:\Windows\system32> systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
 OS Name:                   Microsoft Windows 7 Professional
 OS Version:                6.1.7601 Service Pack 1 Build 7601
-
-
- 
 
 Next we will see what the hostname is of the box and what user we are connected as.
 
