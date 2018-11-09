@@ -1,3 +1,4 @@
+s
 #!/usr/bin/python
 
 print("# file write / read demo")
